@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior:smooth;">
+<title> G Vizz </title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+	:root { --sideBarWidth: 300px; }
+	canvas:hover { cursor: crosshair; }
+	canvas:active:hover, canvas:active:focus { cursor: move; }
+	textarea { text-transform: uppercase; }
+	#infoBar { width: calc(100vw - (var(--sideBarWidth))); }
+	#mainContent { overflow: hidden; }
+	#sideBar {
+		width: var(--sideBarWidth);
+		overflow-x: hidden;
+		z-index: 1;
+	}
+	.actionLog {
+		height: 90vh;
+		overflow-y: scroll;
+		scroll-behavior: smooth;
+		width: 104%;
+	}
+	.beat { animation: beat 500ms infinite alternate; }
+	@keyframes beat {
+		from { transform: scale(1.1, 1.1); }
+		to { transform: scale(1, 1); }
+	}
+	.section {
+		height: 100vh;
+		overflow-y: scroll;
+		scroll-behavior: smooth;
+	}
+	.w3-hover-blue:hover {
+		background-color: blue !important;
+		color: white !important;
+	}
+	.w3-text-yellow { color: yellow !important; }
+	.w3-text-orange { color: orange !important; }
+	.w3-text-cyan { color: cyan !important; }
+	.w3-input {
+		max-width: 100%;
+		min-width: 100%;
+	}
+</style>
+<script defer>
+	const R = getComputedStyle ($(`:root`)[0]);
+	const sideBarWidth = R.getPropertyValue (`--sideBarWidth`).slice (0, -2);
+	let sideBarOpen = true;
+	window.onhashchange = () => { if (sideBarOpen) menu(); }
+	function menu() {
+		if (sideBarOpen) {
+			$(`#sideBar`)[0].style.display = `none`;
+			$(`#infoBar`)[0].style.width = `100vw`;
+			sideBarOpen = false;
+		}else {
+			$(`#sideBar`)[0].style.display = `block`;
+			$(`#infoBar`)[0].style.width = `calc(100vw - ${sideBarWidth}px)`;
+			setTimeout (() => sideBarOpen = true, 400);
+		}
+	}
+</script>
+<body class="w3-row w3-light-gray">
+<a href="#menu" class="w3-btn w3-black w3-hover-indigo" style="position:fixed; z-index:1;" onclick=menu() title="show side panel"> <i class="fa fa-bars"> </i> </a>
+<div id="sideBar" class="section w3-col w3-card-4 w3-animate-left">
+	<div class="w3-bar w3-card w3-black">
+		<a href="#menu" class="w3-bar-item w3-btn w3-hover-indigo" onclick=menu() title="hide side panel"> <i class="fa fa-chevron-left"> </i> </a>
+		<b class="w3-bar-item w3-text-amber"> <i class="fa fa-diamond w3-text-aqua"> </i> G Vizz </b>
+		<b class="w3-bar-item w3-btn w3-hover-red w3-right" onclick=settings() title="settings"> <i class="fa fa-cog"> </i> </b>
+		<b class="w3-bar-item w3-button w3-right w3-hover-dark-gray" onclick=theme(0) title="Dark Theme" id="darkTheme" style="display:none;"> <i class="fa fa-adjust"></i> </b>
+		<b class="w3-bar-item w3-button w3-right w3-hover-light-gray" onclick=theme(1) title="Light Theme" id="lightTheme" style="display:none;"> <i class="fa fa-adjust"> </i> </b>
+	</div>
+	<div style="min-height:100vh;">
+		<center> <b> <i> <p> <input type="file" id="openFile" class="w3-input w3-border" accept=".nc, .txt" /> <small> ( drag and drop .nc file ) </small> </p> </i> </b> </center>
+		<i class="w3-btn w3-large w3-right w3-hover-text-black w3-hover-light-green w3-border w3-border-green w3-text-green fa fa-save" onclick=saveFile() title="Save File"> </i>
+		<i class="w3-btn w3-large w3-right w3-hover-text-black w3-hover-deep-orange w3-border w3-border-red w3-text-red fa fa-image" onclick=IMG.toggle();ShowPreview=!ShowPreview; title="Save as Image / Screenshot"> </i>
+		<img src="" class="w3-image" style="display:none;" />
+		<center> <small> <b> <i> (to save as image, right click on plot) </i> </b> </small> </center> 
+		<noscript> <h5 class="w3-padding w3-center w3-text-red w3-yellow beat"> <b> <i> This browser does not support script or script has been disabled. </i> <br/> Please enable script or use another browser. </b> </h5> </noscript>
+		<b> <textarea rows="20" class="w3-input w3-border w3-small"></textarea> </b>
+		<p id="statusBar"></p>
+		<b class="w3-btn w3-block w3-round-xxlarge w3-indigo w3-hover-black w3-margin-top" title="DRAW PATH" onclick=plotGcode()> <i class="fa fa-play"> </i> GENERATE PATH </b>
+		<label class="w3-center w3-block w3-margin-top"> <input type="checkbox" class="w3-check" id="liveUpdate" /> Live Update </label>
+		<br/>
+		<div class="actionLog">
+			<center> <b> Action Log </b> </center> <br/>
+			<ol id="log" class="w3-tiny" style="padding-left:35px; width:100%;"> </ol>
+		</div>
+	</div>
+	<div class="w3-black w3-center">
+		<i> <small> G Code Visualising Tool <br/> Powered by
+		<a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity w3-text-white"> w3.css </a> </small> </i>
+	</div>
+</div>
+<div id="mainContent" class="section w3-rest">
+	<canvas width="1920" height="1080" > canvas </canvas>
+	<div id="infoBar" class="w3-bottom w3-card-4 w3-black">
+		<p id="error" class="w3-red w3-text-black w3-center"> </p>
+		<div class="w3-bar">
+			<i id="mousePos" class="w3-bar-item"> </i>
+			<i class="w3-bar-item w3-right w3-small w3-button w3-hover-blue" onclick=resetZoomPan()> RESET </b> </i>
+			<i class="w3-bar-item w3-right w3-button w3-hover-indigo fa fa-search-plus" onclick=ZOOM_SLIDER.stepUp();zoomChange();> </i>
+			<i class="w3-bar-item w3-right"> <input type="range" min="1" max="100" step="1" value="50" id="zoomSlider" /> </i>
+			<i class="w3-bar-item w3-right w3-button w3-hover-indigo fa fa-search-minus" onclick=ZOOM_SLIDER.stepDown();zoomChange();> </i>
+			<!-- <b id="measurementTool" class="w3-bar-item w3-right w3-small w3-button w3-green w3-hover-light-green"> <i class="fa fa-expand w3-large"> </i> Measure Distance </b> -->
+		</div>
+	</div>
+</div>
+<script defer>
+	const CANVAS = $(`canvas`)[0];
+	const C = CANVAS.getContext (`2d`);
+	const DROP_AREA = $(`#sideBar`)[0];
+	const GC_ED = $(`textarea`)[0];
+	const FILE_INPUT = $(`#openFile`)[0];
+	const IMG = $(`img`);
+	const LOG = $(`#log`)[0];
+	const VIEW_PORT = $(`#mainContent`)[0];
+	const ZOOM_SLIDER = $(`#zoomSlider`)[0];
+	const DEFAULT_LINE_WIDTH = 2;
+	const MARK_POINT_RADIUS = 10;
+	const RADIUS_ERROR_THRESHOLD = 0.001;		// in millimeter
+	const RESOLUTION = 1000;
+	const ZOOM_DEFAULT_LEVEL = 50;
+	const ZOOM_SLIDER_STEP = 1;
+	const ZOOM_MAX_LIMIT = 100;
+	const ZOOM_MIN_LIMIT = 1;
+	const ZOOM_SCALE_STEP = 0.5;				// 0.0 to 1.0
+	let SelStart, SelEnd;
+	let CurrentTransformedCursor;
+	let CvOrigin = { X: 0, Y: 0 };				// canvas origin
+	let DragStartPosition = { x: 0, y: 0 };
+	let FileName = ``, GCode = ``;
+	let IsDragging = false;
+	let HighlightColor;
+	let InputCommandMap = [];					// g-code editor (textarea) line no. map to cleaned g-code line no.
+	let ShowPreview = false;
+	let SelInterval, AnimeInterval;
+	let L, X, Y, pX, pY;
+	let LineWidth = DEFAULT_LINE_WIDTH;
+	let Logged = false;
+	let ZoomLevel = ZOOM_DEFAULT_LEVEL;
+	function actColor (a) {
+		let c = `white`;
+		a = a.split (` `)[0];
+		if (a == `Arc`) c = `yellow`;
+		if (a == `Cut`) c = `orange`;
+		if (a == `Move`) c = `dimgray`;
+		if (a == `Set`) c = `cyan`;
+		return c;
+	}
+	function drawPathToCanvas() {
+		C.save();
+		C.setTransform (1, 0, 0, 1, 0, 0);
+		C.clearRect (Number.MIN_SAFE_INTEGER / 2, Number.MIN_SAFE_INTEGER / 2, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);
+		C.restore();
+		C.fillRect (Number.MIN_SAFE_INTEGER / 2, Number.MIN_SAFE_INTEGER / 2, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);
+		C.lineWidth = LineWidth;
+		markPoint (`origin`);
+		interpretGcode();
+		markPoint (`end`);
+		if (ShowPreview) CANVAS.toBlob (blob => IMG[0].src = URL.createObjectURL (blob));
+	}
+	function getTransformedPoint (x, y) {
+		const originalPoint = new DOMPoint (x, y);
+		return C.getTransform().invertSelf().transformPoint (originalPoint);
+	}
+	function interpretGcode() {
+		if (GCode == ``) return;
+		$(`#error`)[0].innerHTML = ``;
+		let lineColor, I, J, H, K, R, sAngle, eAngle, antiClock = false, calcRadius, error = false, errMsg;
+		pX = CvOrigin.X = 0;
+		pY = CvOrigin.Y = 0;
+		for (L = 1; L < GCode.length; L++) {
+			antiClock = false;
+			C.lineWidth = LineWidth;
+			C.beginPath();
+			C.moveTo (pX, pY);
+			switch (GCode[L].split (` `)[0]) {
+				case `0` :
+					lineColor = actColor (`Move`);
+					X = val (`X`);
+					Y = val (`Y`);
+					C.lineTo (X, Y);
+					updateActionLog (`Move`);
+					break;
+				case `1` :
+					lineColor = actColor (`Cut`);
+					X = val (`X`);
+					Y = val (`Y`);
+					C.lineTo (X, Y);
+					updateActionLog (`Cut`);
+					break;
+				case `3` :
+					antiClock = true;
+				case `2` :
+					lineColor = actColor (`Arc`);
+					X = val (`X`);
+					Y = val (`Y`);
+					I = val (`I`);
+					J = val (`J`);
+					H = pX + I;
+					K = pY + J;
+					R = Math.sqrt ((I * I) + (J * J));
+					sAngle = Math.atan (J / I) + (I < 0 ? 0 : Math.PI);
+					eAngle = Math.atan ((K - Y) / (H - X)) + ((H < X) ? 0 : Math.PI);
+					calcRadius = Math.sqrt (Math.pow (H - X, 2) + Math.pow (K - Y, 2));
+					if (RADIUS_ERROR_THRESHOLD <= (Math.abs (R - calcRadius) / RESOLUTION)) {
+						error = true;
+						errMsg = `<br> end point is <b> ${(R < calcRadius ? `farther` : `closer`)} </b> than expected <br>`;
+						errMsg += `expected radius <b> ${(R / RESOLUTION).toFixed (3)} </b> , calculated radius <b> ${(calcRadius / RESOLUTION).toFixed (3)} </b> <br><br>`;
+						$(`#error`)[0].innerHTML = `<b> Radius Error! </b> ${errMsg.replace (/<br>/g, ``)}`;
+					}
+					C.arc (H, K, R, sAngle, eAngle, antiClock);
+					updateActionLog (`Arc ${(GCode[L][0] == `3` ? `Anti-`:``)}Clockwise`);
+					break;
+				case `92` :
+					lineColor = actColor (`Set`);
+					X = val (`X`);
+					Y = val (`Y`);
+					CvOrigin.X += (pX - X) / RESOLUTION;
+					CvOrigin.Y -= (pY - Y) / RESOLUTION;
+					C.moveTo (X + MARK_POINT_RADIUS, Y);
+					C.arc (X, Y, MARK_POINT_RADIUS, 0, 2 * Math.PI);
+					C.moveTo (pX, pY);
+					updateActionLog (`Set`);
+					break;
+			}
+			if (L == InputCommandMap.indexOf (GC_ED.value.slice (0, GC_ED.selectionStart).split (`\n`).length)) {
+				C.lineWidth *= 2;
+				lineColor = HighlightColor;
+			}
+			C.strokeStyle = lineColor;
+			C.stroke();
+			pX = X;
+			pY = Y;
+			if (error) {
+				LOG.innerHTML = LOG.innerHTML + errMsg;
+				break;
+			}
+		}
+		Logged = true;
+	}
+	function logActionMsg (action) { return `<li class="w3-text-${actColor (action)}"> <b> ${action} </b> from (<b class="w3-small">${(pX / RESOLUTION).toFixed (3)}</b> , <b class="w3-small">${(pY / RESOLUTION * -1).toFixed (3)}</b>) to (<b class="w3-small">${(X / RESOLUTION).toFixed (3)}</b> , <b class="w3-small">${(Y / RESOLUTION * -1).toFixed (3)}</b>) <br/> </li>`; }
+	function logErrorMsg (line, msg) { return `<br/> [${line}] <small> <b> -> </b> </small> ${msg} <br/>`; }
+	function logValidMsg (msg) { return `<br/> <small> <b> -> </b> </small> ${msg} <br/>`; }
+	function markPoint (p) {
+		let h = 0, k = 0, lC;
+		switch (p) {
+			case `end` :
+				lC = `blue`;
+				h = X;
+				k = Y;
+				break;
+			case `origin` :
+			case `start` :
+				lC = `red`;
+				break;
+		}
+		C.beginPath();
+		C.arc (h, k, MARK_POINT_RADIUS, 0, 2 * Math.PI);
+		C.strokeStyle = lC;
+		C.stroke();
+	}
+	function plotGcode() {
+		validateGcode();
+		Logged = false;
+		LOG.innerHTML = ``;
+		drawPathToCanvas();
+// LOG.scrollIntoView (false);
+	}
+	function resetZoomPan() {
+		LineWidth = DEFAULT_LINE_WIDTH;
+		C.setTransform (1, 0, 0, 1, 0, 0);
+		let origin = getTransformedPoint (parseInt (VIEW_PORT.clientWidth / 2), parseInt (VIEW_PORT.clientHeight / 2));
+		C.translate (origin.x, origin.y);
+		drawPathToCanvas();
+		ZOOM_SLIDER.value = ZoomLevel = ZOOM_DEFAULT_LEVEL;
+	}
+	function saveFile() {
+		$(`body`).append (`<a id="downloadLink" download="${FileName.slice (0, -3)}.NC" href="${URL.createObjectURL (new Blob ([GC_ED.value.toUpperCase()], { "type": "application/x-netcdf" }))}"> </a>`);
+		$(`#downloadLink`)[0].click();
+		$(`#downloadLink`).remove();
+	}
+	function theme (t) {
+		t ? (
+		    $(`#lightTheme`).hide(),
+    		$(`body`).removeClass (`w3-dark-gray`).addClass (`w3-light-gray`),
+		    $(`textarea`).removeClass (`w3-black`),
+		    $(`#darkTheme`).show()
+	    ) : (
+		    $(`#darkTheme`).hide(),
+    		$(`body`).removeClass (`w3-light-gray`).addClass (`w3-dark-gray`),
+		    $(`textarea`).addClass (`w3-black`),
+		    $(`#lightTheme`).show()
+        );
+	}
+	function timeFormat (format, t = new Date()) {
+		const month = [`Jan`, `Feb`, `Mar`, `Apr`, `May`, `Jun`, `Jul`, `Aug`, `Sep`, `Oct`, `Nov`, `Dec`];
+		const day = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
+		format = format.replace (`%Y`, t.getFullYear());			//	year YYYY
+		format = format.replace (`%M`, t.getMonth() + 1);			//	month MM
+		format = format.replace (`%D`, t.getDate());				//	day DD
+		format = format.replace (`%h`, t.getHours());				//	hours hh
+		format = format.replace (`%m`, t.getMinutes());				//	minutes mm
+		format = format.replace (`%s`, t.getSeconds());				//	seconds ss
+		format = format.replace (`%N`, month[t.getMonth()]);		//	month MMM
+		format = format.replace (`%d`, day[t.getDay()]);			//	day ddd
+		return format;
+	}
+	function updateActionLog (action) {
+		if (Logged) return;
+		LOG.innerHTML = LOG.innerHTML + logActionMsg (action);
+	}
+	function val (g) {
+		let originOffset = 0;
+		if (g == `X`) originOffset = CvOrigin.X;
+		if (g == `Y`) originOffset = CvOrigin.Y;
+		let val = GCode[L].split (g)[1].split (` `)[0];
+		val = val.includes (`.`) ? parseFloat (val) : (parseFloat (val) / 1000);
+		return RESOLUTION * ((isNaN (val) ? 0 : val) + originOffset) * ((g == `J` || g == `Y`) ? -1 : 1);
+	}
+	function validateGcode() {
+		let  errFlag = false, mode, prevMode = `G0`, prevX = `X0`, prevY = `Y0`,tmp = [], gc = [], GC = GC_ED.value.toUpperCase();
+		InputCommandMap = [];
+		LOG.innerHTML = ``;
+		GC = GC.replace (/[XYIJ][ \n]/gi, g => g[0] + `0 ` + g[1]);
+		GC = GC.replace (/G[4-8][0-9]/gi, ``).split (`\n`);
+		LOG.innerHTML = LOG.innerHTML + logValidMsg (`Axis zero fill complete.`);
+		for (let i = 0; i < GC.length; i++) {
+			GC[i] = GC[i].trim();
+			if (/[^GXY]/i.test (GC[i][0])) continue;
+			GC[i] = GC[i].split (` `);
+			tmp = [];
+			for (let j = 0; j < GC[i].length; j++) {
+				GC[i][j] = GC[i][j].trim();
+				if (/[^GIJXY]/i.test (GC[i][j][0])) continue;
+				tmp.push (GC[i][j]);
+			}
+			gc.push (tmp.join (` `));
+			InputCommandMap.push (i + 1);
+		}
+		GC = gc;
+		LOG.innerHTML = LOG.innerHTML + logValidMsg (`Auto-format complete.`);
+		for (let i = 0; i < GC.length; i++) {
+			if (GC[i][0] == `G`) {
+				if (/[01239]/.test (GC[i][1])) prevMode = GC[i].split (` `)[0];
+			}else GC[i] = prevMode + ` ` + GC[i];
+		}
+		LOG.innerHTML = LOG.innerHTML + logValidMsg (`G modes filled.`);
+		gc = [];
+		for (let i = 0; i < GC.length; i++) {
+			mode = parseInt (GC[i].slice (1, 3));
+			switch (mode) {
+				case 0 :
+				case 1 :
+				case 2 :
+				case 3 :
+				case 92 :
+					if (!(/[XY]/.test (GC[i]))) {
+						LOG.innerHTML = LOG.innerHTML + logErrorMsg (i + 1, `Axis Word Error: atleast one axis word required.`);
+						errFlag = true;
+					}else {
+						GC[i] = GC[i].split (` `);
+						if (!(/[X]/.test (GC[i][1]))) GC[i].splice (1, 0, prevX);
+						if (!(/[Y]/.test (GC[i][2]))) GC[i].splice (2, 0, prevY);
+						prevX = GC[i][1];
+						prevY = GC[i][2];
+						GC[i] = GC[i].join (` `);
+					}
+					if (mode == 2 || mode == 3) {
+						if (!(/[IJ]/.test (GC[i]))) {
+							LOG.innerHTML = LOG.innerHTML + logErrorMsg (i + 1, `Arc Offset Error: atleast one offset required.`);
+							errFlag = true;
+						}else {
+							GC[i] = GC[i].split (` `);
+							if (!(/[I]/.test (GC[i][3]))) GC[i].splice (3, 0, `I0`);
+							if (!(/[J]/.test (GC[i][4]))) GC[i].splice (4, 0, `J0`);
+							GC[i] = GC[i].join (` `);
+						}
+					}
+					gc.push (GC[i]);
+					break;
+				default :
+// LOG.innerHTML = LOG.innerHTML + logErrorMsg (i + 1, `Ignoring Command [${mode}]`);
+					LOG.innerHTML = LOG.innerHTML + logErrorMsg (i + 1, `Ignoring Command [${GC[i]}]`);
+			}
+// if (errFlag) break;
+		}
+		if (errFlag) {
+			GCode = ``;
+		}else {
+			LOG.innerHTML = LOG.innerHTML + logValidMsg (`Axis words filled.`);
+			GCode = gc.join (` `).split (`G`);
+			InputCommandMap.unshift (``);
+			console.log (`processed G code`);
+			for (let i = 0; i < gc.length; i++) console.log (`[${i}]: ${gc[i]}`);
+// console.log (InputCommandMap);
+		}
+// LOG.scrollIntoView (false);
+	}
+	function zoomChange() {
+		const zoom = (ZoomLevel - ZOOM_SLIDER.value) < 0 ? 1 + ZOOM_SCALE_STEP : 1 - ZOOM_SCALE_STEP;
+		while (ZoomLevel != ZOOM_SLIDER.value) {
+			LineWidth /= zoom;
+			C.translate (CurrentTransformedCursor.x, CurrentTransformedCursor.y);
+			C.scale (zoom, zoom);
+			C.translate (-CurrentTransformedCursor.x, -CurrentTransformedCursor.y);
+			drawPathToCanvas();
+			if (zoom < 1) ZoomLevel -= ZOOM_SLIDER_STEP;
+			if (1 < zoom) ZoomLevel += ZOOM_SLIDER_STEP;
+		}
+	}
+	CANVAS.onmousedown = e => {
+		IsDragging = true;
+		DragStartPosition = getTransformedPoint (e.offsetX, e.offsetY);
+	}
+	CANVAS.onmousemove = e => {
+		CurrentTransformedCursor = getTransformedPoint (e.offsetX, e.offsetY);
+// $(`#mousePos`)[0].innerHTML = `x: ${e.offsetX} &nbsp; y: ${e.offsetY}`;
+// $(`#mousePos`)[0].innerHTML = `x: ${(CurrentTransformedCursor.x / RESOLUTION).toFixed (3)} &nbsp; y: ${(CurrentTransformedCursor.y / RESOLUTION * -1).toFixed (3)}`;
+		$(`#mousePos`)[0].innerHTML = `x: ${((CurrentTransformedCursor.x / RESOLUTION) + CvOrigin.X).toFixed (3)} &nbsp; y: ${-((CurrentTransformedCursor.y / RESOLUTION) + CvOrigin.Y).toFixed (3)}`;
+		if (IsDragging) {
+			C.translate (CurrentTransformedCursor.x - DragStartPosition.x, CurrentTransformedCursor.y - DragStartPosition.y);
+			drawPathToCanvas();
+		}
+	}
+	CANVAS.onmouseup = () => IsDragging = false;
+	CANVAS.onwheel = e => {
+		e.preventDefault();
+		const zoom = e.deltaY < 0 ? 1 + ZOOM_SCALE_STEP : 1 - ZOOM_SCALE_STEP;
+		if (zoom < 1) {
+			if (ZoomLevel <= ZOOM_MIN_LIMIT) return;
+			else ZoomLevel -= ZOOM_SLIDER_STEP;
+		}
+		if (1 < zoom) {
+			if (ZOOM_MAX_LIMIT <= ZoomLevel) return;
+			else ZoomLevel += ZOOM_SLIDER_STEP;
+		}
+		LineWidth /= zoom;
+		ZOOM_SLIDER.value = ZoomLevel;
+		C.translate (CurrentTransformedCursor.x, CurrentTransformedCursor.y);
+		C.scale (zoom, zoom);
+		C.translate (-CurrentTransformedCursor.x, -CurrentTransformedCursor.y);
+		drawPathToCanvas();
+	}
+	DROP_AREA.ondragover = e => {
+		e.stopPropagation();
+		e.preventDefault();
+// Style the drag-and-drop as a "copy file" operation.
+		e.dataTransfer.dropEffect = `copy`;
+	}
+	DROP_AREA.ondrop = e => {
+		e.stopPropagation();
+		e.preventDefault();
+		const fileList = e.dataTransfer.files;
+		FILE_INPUT.files = fileList;
+		let reader = new FileReader();
+		reader.onload = e => GC_ED.value = e.target.result;
+		FileName = fileList[0].name;
+		reader.readAsText (new Blob ([fileList[0]], { "type": "application/x-netcdf" }));
+	}
+	FILE_INPUT.onchange = e => {
+		let reader = new FileReader();
+		reader.onload = e => GC_ED.value = e.target.result;
+		FileName = e.target.files[0]?.name;
+		if (FileName == undefined) {
+			FileName = ``;
+			return;
+		}
+		reader.readAsText (new Blob ([e.target.files[0]], { "type": "application/x-netcdf" }));
+	}
+	GC_ED.onblur = () =>  clearInterval (SelInterval);
+	GC_ED.onfocus = () => {
+		clearInterval (SelInterval);
+		SelInterval = setInterval (() => {
+			if (SelStart != GC_ED.selectionStart || SelEnd != GC_ED.selectionEnd) {
+				drawPathToCanvas();
+				SelStart = GC_ED.selectionStart;
+				SelEnd = GC_ED.selectionEnd;
+			}
+		}, 100);
+		clearInterval (AnimeInterval);
+		AnimeInterval = setInterval (() => {
+			HighlightColor = HighlightColor == `lime` ? `green` : `lime`;
+			drawPathToCanvas();
+		}, 200);
+	}
+	GC_ED.oninput = () => { if ($(`#liveUpdate`)[0].checked) plotGcode(); }
+	window.matchMedia (`(prefers-color-scheme: dark)`).onchange = () => theme (!window.matchMedia (`(prefers-color-scheme: dark)`).matches);
+	ZOOM_SLIDER.oninput = zoomChange;
+
+	theme (!window.matchMedia (`(prefers-color-scheme: dark)`).matches);
+	let origin = getTransformedPoint (parseInt (VIEW_PORT.clientWidth / 2), parseInt (VIEW_PORT.clientHeight / 2));
+	C.translate (origin.x, origin.y);
+	drawPathToCanvas();
+</script>
+</body>
+</html>

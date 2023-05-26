@@ -231,7 +231,7 @@
 		INPUTS.on (`input`, function() {
 			let params = [];
 			INPUTS.each (function() { params.push (`${this.id}=${this.value}`); });
-			PRN_LNK.href = `Invo_GenPrint.html?${encodeURIComponent (params.join (`&`))}`;
+			PRN_LNK.href = `InvoGen_Print.html?${encodeURIComponent (params.join (`&`))}`;
 		});
 		$(`#TABLE_HEAD_CLR`).val (`#00ffff`);
 	});

@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="/lib/font-awesome-4.7.0/css/font-awesome.min.css"/>
 <script src="/lib/jquery-3.6.4.min.js"></script>
 <script src="/lib/angular.min.js"></script>
-<!-- <script src="/PostFormData.js"></script> -->
 <body ng-app="" ng-init="THEME=false" class="w3-sans-serif w3-{{THEME ? 'light-gray' : 'dark'}}" style="background-color:black;">
 <style>
 	#statusBar {
@@ -61,7 +60,7 @@
 <header class="w3-top" style="z-index:5;">
 	<div class="w3-bar w3-card w3-animate-top w3-{{THEME ? 'white' : 'black'}}">
 		<a href="#menu" class="w3-bar-item w3-button" onclick=menu() title="menu"> <i class="fa fa-bars"> </i> </a>
-		<b class="w3-bar-item"> Invo_Gen </b>
+		<b class="w3-bar-item"> InvoGen </b>
 		<b class="w3-bar-item w3-button w3-right w3-hover-{{THEME ? 'black' : 'white'}}" title="{{THEME ? 'dark' : 'light'}} theme" ng-click="THEME=!THEME"> <i class="fa fa-adjust"> </i> </b>
 		<a href="#" class="w3-bar-item w3-button w3-right w3-indigo w3-hover-light-green" target="_blank" id="printLnk" title="Preview / Print"> <i class="fa fa-print"> </i> Preview / Print </a>
 	</div>

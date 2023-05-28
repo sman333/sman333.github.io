@@ -221,7 +221,7 @@
 					lineColor = actColor (`Set`);
 					X = val (`X`);
 					Y = val (`Y`);
-					CvOrigin.X += (pX - X) / RESOLUTION;
+					CvOrigin.X -= (pX - X) / RESOLUTION;
 					CvOrigin.Y -= (pY - Y) / RESOLUTION;
 					C.moveTo (X + MARK_POINT_RADIUS, Y);
 					C.arc (X, Y, MARK_POINT_RADIUS, 0, 2 * Math.PI);

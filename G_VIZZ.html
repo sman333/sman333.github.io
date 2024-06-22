@@ -30,6 +30,11 @@
 		from { transform: scale(1.1, 1.1); }
 		to { transform: scale(1, 1); }
 	}
+	.hideScrollBar::-webkit-scrollbar { display: none; }
+	.hideScrollBar {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+	}
 	.section {
 		height: 100vh;
 		overflow-y: scroll;

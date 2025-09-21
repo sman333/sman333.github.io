@@ -86,10 +86,8 @@
 		</p>
 		<noscript> <h5 class="w3-center w3-padding w3-text-red w3-yellow w3-bold beat"> <i> This browser does not support script or script has been disabled. </i> <br/> Please enable script or use another browser. </h5> </noscript>
 		<p class="w3-center w3-teal w3-padding-small w3-text-black" style="margin:0;">
-			X <input type="number" class="w3-black" id="rotateX" min="-999" value="1" max="999"/>
-			&nbsp; Y <input type="number" class="w3-black" id="rotateY" min="-999" value="1" max="999"/> <br>
 			<i class="w3-button fa fa-rotate-left rotateLeftBtn" style="padding:5px 30px;"></i>
-			<input type="number" class="w3-black" id="rotateDeg" min="0" value="45" max="180" style="margin-top:5px; width:40%;"/>
+			<input type="number" class="w3-black" id="rotateDeg" min="0" value="90" max="180" style="margin-top:5px; width:40%;"/>
 			<i class="w3-button fa fa-rotate-right rotateRightBtn" style="padding:5px 30px;"></i>
 		</p>
 		<p class="w3-center w3-red w3-padding-small w3-text-black" style="margin:0;">
@@ -163,8 +161,6 @@
 	const FILE_INPUT = $(`#openFile`)[0];
 	const PATH_LEN = $(`#pathlength`)[0];
 	const ROT_DEG = $(`#rotateDeg`)[0];
-	const ROT_X = $(`#rotateX`)[0];
-	const ROT_Y = $(`#rotateY`)[0];
 	let FileName = ``;
 	let ShowPreview = false;
 	function actColor (a) {
@@ -546,40 +542,40 @@
 				SelEnd = GC_ED.selectionEnd;
 			}
 		}, 100);
-		// clearInterval (AnimeInterval);
-		// AnimeInterval = setInterval (() => {
-		// 	HighlightColor = HighlightColor == `lime` ? `green` : `lime`;
-		// 	drawPathToCanvas();
-		// }, 200);
+		clearInterval (AnimeInterval);
+		AnimeInterval = setInterval (() => {
+			HighlightColor = HighlightColor == `lime` ? `green` : `lime`;
+			drawPathToCanvas();
+		}, 200);
 	}
 	GC_ED.oninput = () => { if ($(`#liveUpdate`)[0].checked) plotGcode(); }
 	CUR_X.oninput = () => { if ($(`#liveUpdate`)[0].checked) plotGcode(); }
 	CUR_Y.oninput = () => { if ($(`#liveUpdate`)[0].checked) plotGcode(); }
 	ZOOM_SLIDER.oninput = zoomChange;
 
-	function translatePath (dX = 0, dY = 0) {
-		let  g, nH, nK, arcCen = {}, arcCenRef = {}, arcStr, TRANS_GCode = [];
-		for (L = 1; L < GCode.length; L++) {
-			g = GCode[L].split (` `)[0];
-			arcStr = ``;
-			switch (g) {
-				case `2`:
-				case `3`:
-					I = val (`I`) + dX;
-					J = - val (`J`) - dY;
-					arcStr = ` I${I} J${J}`;
-				case `0`:
-				case `1`:
-				case `92`:
-					X = val (`X`) + dX;
-					Y = - val (`Y`) - dY;
-					TRANS_GCode[L - 1] = `G${g} X${X} Y${Y}${arcStr}`;
-			}
-		}
-		GC_ED.value = TRANS_GCode.join (`\n`) + `\n`;
-		validateGcode();
-		GC_ED.dispatchEvent (new Event (`input`));
-	}
+	// function translatePath (dX = 0, dY = 0) {
+	// 	let  g, nH, nK, arcCen = {}, arcCenRef = {}, arcStr, TRANS_GCode = [];
+	// 	for (L = 1; L < GCode.length; L++) {
+	// 		g = GCode[L].split (` `)[0];
+	// 		arcStr = ``;
+	// 		switch (g) {
+	// 			case `2`:
+	// 			case `3`:
+	// 				I = val (`I`) + dX;
+	// 				J = - val (`J`) - dY;
+	// 				arcStr = ` I${I} J${J}`;
+	// 			case `0`:
+	// 			case `1`:
+	// 			case `92`:
+	// 				X = val (`X`) + dX;
+	// 				Y = - val (`Y`) - dY;
+	// 				TRANS_GCode[L - 1] = `G${g} X${X} Y${Y}${arcStr}`;
+	// 		}
+	// 	}
+	// 	GC_ED.value = TRANS_GCode.join (`\n`) + `\n`;
+	// 	validateGcode();
+	// 	GC_ED.dispatchEvent (new Event (`input`));
+	// }
 	function rotatePath (antiClock = false) {
 		// if (!confirm (`Are you sure you want to rotate path?`)) return;
 		let  g, nH, nK, arcCen = {}, arcCenRef = {}, arcStr, rotAng = (antiClock ? 1 : -1) * parseFloat (ROT_DEG.value) * Math.PI / 180, TRANS_GCode = [];
